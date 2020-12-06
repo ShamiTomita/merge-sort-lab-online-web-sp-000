@@ -34,22 +34,13 @@ function merge(array1, array2){
   return sorted.concat(array1.slice(leftIndex)).concat(array2.slice(rightIndex));
 }
 
- 
-  
-  function mergeSort (unsortedArray) {
-  // No need to sort the array if the array only has one element or empty
-  if (unsortedArray.length <= 1) {
-    return unsortedArray;
+ function mergeSort(array){
+    if (array.length <= 1){
+      return array;
+    }
+    const midpoint = Math.floor(array.length / 2);
+    const firstHalf = array.slice(0, midpoint);
+    const secondHalf = array.slice(midpoint);
+    return merge(mergeSort(firstHalf), mergeSort(secondHalf));
   }
-  // In order to divide the array in half, we need to figure out the middle
-  const middle = Math.floor(unsortedArray.length / 2);
-
-  // This is where we will be dividing the array into left and right
-  const left = unsortedArray.slice(0, middle);
-  const right = unsortedArray.slice(middle);
-
-  // Using recursion to combine the left and right
-  return merge(
-    mergeSort(left), mergeSort(right)
-  );
-}
+  
