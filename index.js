@@ -31,9 +31,7 @@ function merge(array1, array2){
       rightIndex++;
     }
   }
-  return sorted
-  .concat(array1.slice(leftIndex))
-  .concat(array2.slice(rightIndex));
+  return sorted.concat(array1.slice(leftIndex)).concat(array2.slice(rightIndex));
 }
 
  function mergeSort(array){
