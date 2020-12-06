@@ -3,15 +3,15 @@
 //3. Implement the mergeSort algorithm using the previous functions that you wrote. 
 
 function findMinAndRemoveSorted(array){
-  let min = array[0]
-  let minIndex = 0
-  for (let i = 0; i < array.length; i++){
-    if(array[i] < min){
-      min = array[i];
-      minIndex = i
+  let min = array[0] //set the first index as the min (for now)
+  let minIndex = 0 //this will eventually house the true minIndex
+  for (let i = 0; i < array.length; i++){ //go through the array and increment it until it has reached the array.length
+    if(array[i] < min){ //if for the given index of i is less that the set min
+      min = array[i]; //the new min will be set for the index placement of i
+      minIndex = i //and so the true min(for now) is i
     }
-    array.splice(minIndex, 1)
-    return min;
+    array.splice(minIndex, 1)//once the if statement runs, remove the minIndex
+    return min;//return the current min
   }
 }
 
@@ -19,11 +19,11 @@ function findMinAndRemoveSorted(array){
 
 
 function merge(array1, array2){
-  let sorted = []
+  let sorted = [] //the array that we will pass the new merged array into
   let leftIndex = 0
   let rightIndex = 0
-  while(leftIndex < array1.length && rightIndex < array2.length){
-    if (array1[leftIndex] < array2[rightIndex]){
+  while(leftIndex < array1.length && rightIndex < array2.length){ //while there are still items within both arrays
+    if (array1[leftIndex] < array2[rightIndex]){ //if the first index 
       sorted.push(array1[leftIndex]);
       leftIndex++;
     }else{
