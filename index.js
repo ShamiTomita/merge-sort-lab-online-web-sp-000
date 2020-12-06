@@ -34,7 +34,7 @@ function merge(array1, array2){
     if(array.length <= 0){
       return array
     }
-    const midpoint = array.length/2
+    const midpoint = Math.floorarray.length/2
     let firstHalf = array.slice(0, midpoint)
     let secondHalf = array.slice(midpoint, array.length)
  {
