@@ -35,11 +35,13 @@ function merge(array1, array2){
 }
 
  function mergeSort(array){
-    if(array.length <= 0){
+    if (array.length <= 0){
       return array;
     }
-    let midpoint = Math.floor(array.length/2);
-    let firstHalf = array.slice(0, midpoint);
-    let secondHalf = array.slice(midpoint);
+    const midpoint = Math.floor(array.length/2);
+    const firstHalf = array.slice(0, midpoint);
+    const secondHalf = array.slice(midpoint);
     return merge(mergeSort(firstHalf), mergeSort(secondHalf));
   }
+  
+  
