@@ -35,7 +35,7 @@ function merge(array1, array2){
     let firstHalf = array.slice(0, midpoint)
     let secondHalf = array.slice(midpoint, array.length)
  
-    if(array.length < 2){
+    if(array.length <= 0){
       return array
     } else {
       merge(mergeSort(firstHalf), mergeSort(secondHalf))
