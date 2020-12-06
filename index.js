@@ -18,22 +18,26 @@ function findMinAndRemoveSorted(array){
 
 
 
-function merge(array1, array2){
-  let sorted = []
-  let leftIndex = 0
-  let rightIndex = 0
-  let currentMin;
-  while(leftIndex < array1.length && rightIndex <array2.length){
-    if (array1[leftIndex] < array2[rightIndex]){
-      leftIndex++;
-    }else{
-      sorted.push(array2[rightIndex]);
-      rightIndex++;
+function merge (left, right) {
+  let resultArray = [], leftIndex = 0, rightIndex = 0;
+
+  // We will concatenate values into the resultArray in order
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      resultArray.push(left[leftIndex]);
+      leftIndex++; // move left array cursor
+    } else {
+      resultArray.push(right[rightIndex]);
+      rightIndex++; // move right array cursor
     }
   }
-  return sorted.concat(array1.slice(leftIndex)).concat(array2.slice(rightIndex));
-}
 
+  // We need to concat here because there will be one element remaining
+  // from either left OR the right
+  return resultArray
+          .concat(left.slice(leftIndex))
+          .concat(right.slice(rightIndex));
+}
  function mergeSort(array){
     if(array.length <= 0){
       return array;
