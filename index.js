@@ -32,7 +32,7 @@ function merge(array1, array2){
     }
       
   }
-  return sorted.concat(firstHalf).concat(secondHalf)
+  return sorted.concat(array1.slicefirstHalf).concat(secondHalf)
 }
 
  function mergeSort(array){
