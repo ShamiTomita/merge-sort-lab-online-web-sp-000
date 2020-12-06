@@ -30,9 +30,8 @@ function merge(array1, array2){
       sorted.push(array2[rightIndex]);
       rightIndex++;
     }
-      
   }
-  return sorted.concat(array1.slicefirstHalf).concat(secondHalf)
+  return sorted.concat(array1.slice(leftIndex)).concat(array2.slice(rightIndex))
 }
 
  function mergeSort(array){
