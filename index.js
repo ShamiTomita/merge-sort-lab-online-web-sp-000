@@ -27,7 +27,7 @@ function merge(array1, array2){
     if (array1[leftIndex] < array2[rightIndex]){
       leftIndex++;
     }else{
-      sorted.push(array2)
+      sorted.push(array2[rightIndex])
     }
       
     
