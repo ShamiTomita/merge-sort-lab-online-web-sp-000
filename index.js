@@ -15,16 +15,7 @@ function findMinAndRemoveSorted(array){
   }
 }
 
-function findMinAndRemove(array1, array2){
-  let minfirstHalf = array1[0]
-  let minsecondHalf = array2[0]
- 
-  if(minfirstHalf < minsecondHalf){
-    return array1.shift()
-  } else {
-    return array2.shift()
-  }
-}
+
 
 
 function merge(array1, array2){
