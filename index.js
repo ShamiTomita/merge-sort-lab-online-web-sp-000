@@ -31,7 +31,6 @@ function merge(array1, array2){
       rightIndex++;
     }
       
-    
   }
   return sorted.concat(firstHalf).concat(secondHalf)
 }
