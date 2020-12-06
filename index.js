@@ -23,11 +23,11 @@ function merge(array1, array2){
   let leftIndex = 0
   let rightIndex = 0
   while(leftIndex < array1.length && rightIndex < array2.length){ //while there are still items within both arrays
-    if (array1[leftIndex] < array2[rightIndex]){ //if the first index 
-      sorted.push(array1[leftIndex]);
-      leftIndex++;
+    if (array1[leftIndex] < array2[rightIndex]){ //if the first index of the first array is less than the firstindex of the right array
+      sorted.push(array1[leftIndex]); //push that left index (in this case the smallest of the two into the sorted index)
+      leftIndex++; //move to the next index in the first array
     }else{
-      sorted.push(array2[rightIndex]);
+      sorted.push(array2[rightIndex]); //the inverse in case the second array is the smallest
       rightIndex++;
     }
   }
