@@ -18,10 +18,10 @@ function findMinAndRemoveSorted(array){
 
 
 
-function merge(array1, array2){
+function merge(leftIndex, rightIndex){
   let sorted = []
-  let firstIndex = array1
-  let  = array2
+  leftIndex = 0
+  rightIndex = 0
   let currentMin;
   while(firstHalf.length != 0 && secondHalf.length != 0){
     let currentMin = findMinAndRemove(firstHalf, secondHalf)
