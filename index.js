@@ -24,7 +24,7 @@ function merge(array1, array2){
   rightIndex = 0
   let currentMin;
   while(leftIndex < array1.length && rightIndex <array2.length){
-    if (array1[leftIndex] 
+    if (array1[leftIndex] < array2[rightIndex]
       
     
   }
