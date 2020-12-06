@@ -22,9 +22,8 @@ function merge(leftIndex, rightIndex){
   let sorted = []
   leftIndex = 0
   rightIndex = 0
-  let currentMin;
-  while(firstHalf.length != 0 && secondHalf.length != 0){
-    let currentMin = findMinAndRemove(firstHalf, secondHalf)
+  while(leftIndex.length != 0 && secondHalf.length != 0){
+    let currentMin = findMinAndRemove(leftIndex, secondHalf)
     sorted.push(currentMin)
   }
   return sorted.concat(firstHalf).concat(secondHalf)
