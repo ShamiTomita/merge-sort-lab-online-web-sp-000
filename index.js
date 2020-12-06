@@ -23,7 +23,7 @@ function merge(array1, array2){
   leftIndex = 0
   rightIndex = 0
   let currentMin;
-  while(leftIndex < array1.length ){
+  while(leftIndex < array1.length && rightIndex <){
     let currentMin = findMinAndRemove(firstHalf, secondHalf)
     sorted.push(currentMin)
   }
